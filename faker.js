@@ -6,12 +6,14 @@ let client = []
 let blog = []
 for (let i = 0; i < 25; i++) {
     about.push({
-        name: faker.name.firstName(),
-        pos: faker.name.lastName()
+        title: faker.date.past(),
+        text: faker.lorem.text(),
     })
 }
 for (let i = 0; i < 10; i++) {
-    special.push({})
+    special.push({
+        
+    })
 }
 for (let i = 0; i < 15; i++) {
     client.push({})
