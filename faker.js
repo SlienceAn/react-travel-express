@@ -1,24 +1,24 @@
 const { fake } = require('faker')
 const faker = require('faker')
-let about = []
-let special = []
-let client = []
-let blog = []
-for (let i = 0; i < 25; i++) {
-    about.push({
-        title: faker.date.past(),
-        text: faker.lorem.text(),
+const memberList = [
+    { account: 'react', password: 'react' },
+    { account: 'redux', password: 'redux' },
+    { account: 'test', password: 'test' },
+]
+let placeList = []
+function cityRandom() {
+    let city = ['台北', '桃園', '新竹', '台中', '台南', '高雄', '台東', '花蓮', '嘉義', '宜蘭']
+    let i = (parseInt(Math.random() * 10))
+    return city[i]
+}
+for (let i = 0; i < 60; i++) {
+    placeList.push({
+        placeimg: "https://picsum.photos/300/200?random=" + i,
+        name: faker.lorem.lines(),
+        text: faker.lorem.paragraph(),
+        city: cityRandom()
+
     })
 }
-for (let i = 0; i < 10; i++) {
-    special.push({
-        
-    })
-}
-for (let i = 0; i < 15; i++) {
-    client.push({})
-}
-for (let i = 0; i < 5; i++) {
-    blog.push({})
-}
-module.exports = { about, special, client, blog }
+module.exports = memberList
+module.exports = placeList
