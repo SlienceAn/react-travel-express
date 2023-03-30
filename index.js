@@ -20,6 +20,26 @@ app.post('/user', (req, res) => {
 app.get('/', (req, res) => {
     res.status(200).send("Get Express");
 })
+app.get('/about', (req, res) => {
+    res.status(200).send([
+        {
+            title: "title-1",
+            text: "text-1"
+        },
+        {
+            title: "title-2",
+            text: "text-2"
+        },
+        {
+            title: "title-2",
+            text: "text-2"
+        },
+        {
+            title: "title-2",
+            text: "text-2"
+        }
+    ])
+})
 app.post('/sign', (req, res) => {
     const { account, password, mail, phone, address } = req.body
     console.log(req.body)
