@@ -17,6 +17,9 @@ app.post('/user', (req, res) => {
         res.json(response)
     }
 })
+app.get('/', (req, res) => {
+    res.status(200).send("Get Express");
+})
 app.post('/sign', (req, res) => {
     const { account, password, mail, phone, address } = req.body
     console.log(req.body)
@@ -34,3 +37,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log('app is run in 3000')
 })
+
+module.exports = app;
